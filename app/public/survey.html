@@ -50,8 +50,8 @@
 										<input class="u-full-width" type="text" id="name">
                 </div>
                 <div class="input-field col s6">
-										<label for="image">Put a link here to a photo or drawing of yourself.</label>
-										<input class="u-full-width" type="text" id="image">
+										<label for="photo">Put a link here to a photo or drawing of yourself.</label>
+										<input class="u-full-width" type="text" id="photo">
                 </div>
               </div>
             </form>
@@ -241,6 +241,8 @@
 			event.preventDefault();
 			// Gather user inputs
 			var userInput = {
+				name: $("#name").val(),
+        photo: $("#photo").val(),
 				scores:[
 					$('#question1').val().trim(),
 					$('#question2').val().trim(),
