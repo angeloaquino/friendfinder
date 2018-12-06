@@ -1,0 +1,11 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "An Node.js and Express based friend matching application.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
