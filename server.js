@@ -1,27 +1,23 @@
-//using express, body-parser, and path
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+// Dependencies
+var express = require('express');
+var path = require('path');
 
-//creates an express server set to app
+// Configure the Express application
 var app = express();
+var PORT = process.env.PORT || 8000;
 
-// creates the port using 8080
-var PORT = process.env.PORT || 8080;
+// Expose the public directory to access CSS files
+app.use(express.static(path.join(__dirname, './app/public')));
 
-//allows express server to use the body-parser
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+// Add middleware to parse incoming request bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/static', express.static(path.join(__dirname, 'app/public')))
+// Application routes
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
-//allows the express server to use the routes by applying "require"
-require("./app/routing/api-routes.js")(app);
-require("./app/routing/html-routes.js")(app);
-
-
+// Start listening on PORT
 app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+  console.log('App is listening on PORT: ' + PORT);
 });

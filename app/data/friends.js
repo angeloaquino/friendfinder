@@ -1,4 +1,4 @@
-var friends = [
+var pokemonArray = [
   {
     name: "Jim Halpert",
     photo: "http://www.pajiba.com/assets_c/2018/05/jim-halpert-revisionism-thumb-700xauto-196874.jpg",
@@ -99,5 +99,5 @@ var friends = [
 ];
 
 // exports the friends array
-module.exports = friends;
+module.exports = pokemonArray;
 
