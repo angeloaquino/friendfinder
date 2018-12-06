@@ -2,14 +2,14 @@
 var path = require('path');
 
 // Import the list of starter entries
-var starterPokemon = require('../data/friends.js');
+var officeData = require('../data/friends.js');
 
 // Export API routes
 module.exports = function(app) {
 
 	// Total list of starter entries
 	app.get('/api/friends', function(req, res) {
-		res.json(starterPokemon);
+		res.json(officeData);
 	});
 
 	// Add new starter entry
@@ -24,25 +24,25 @@ module.exports = function(app) {
 		var totalDifference = 10000; // Make the initial value big for comparison
 
 		// Examine all existing starter pokemon in the array
-		for (var i = 0; i < starterPokemon.length; i++) {
+		for (var i = 0; i < officeData.length; i++) {
 
 			// Compute differenes for each question
 			var diff = 0;
 			for (var j = 0; j < userResponses.length; j++) {
-				diff += Math.abs(starterPokemon[i].scores[j] - userResponses[j]);
+				diff += Math.abs(officeData[i].scores[j] - userResponses[j]);
 			}
 
 			// If lowest difference, record the starter match
 			if (diff < totalDifference) {
 
 				totalDifference = diff;
-				matchName = starterPokemon[i].name;
-				matchImage = starterPokemon[i].photo;
+				matchName = officeData[i].name;
+				matchImage = officeData[i].photo;
 			}
 		}
 
 		// Add new user
-		starterPokemon.push(userInput);
+		officeData.push(userInput);
 
 		// Send appropriate response
 		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
