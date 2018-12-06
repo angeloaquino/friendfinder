@@ -38,8 +38,24 @@
 	</header>
 
 	<!-- Main Content -->
+
+
 	<main>
 		<div class="container">
+			  <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+										<label for="name">What's your name?</label>
+										<input class="u-full-width" type="text" id="name">
+                </div>
+                <div class="input-field col s6">
+										<label for="image">Put a link here to a photo or drawing of yourself.</label>
+										<input class="u-full-width" type="text" id="image">
+                </div>
+              </div>
+            </form>
+  </div>
 			<div class="row">
 				<div class="col s12 z-depth-5 mainpanel">
 					<div id="mainpanel-content">
@@ -47,8 +63,8 @@
 
 						<!-- Survey Questions -->
 						<div class="input-field col s12">
-							<h3>Question 1</h3>
-							<h5>You have a craving for adventure and new experiences.</h5>
+							<h3>1.</h3>
+							<h5>Do you like your job?</h5>
 							<select id="question1">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -60,8 +76,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 2</h3>
-							<h5>You value comfort in the form of solitude rather than surrounded by others.</h5>
+							<h3>2.</h3>
+							<h5>Does your ex like you? </h5>
 							<select id="question2">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -73,8 +89,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 3</h3>
-							<h5>You tend to be an overthinker, even with the simplist of tasks.</h5>
+							<h3>3.</h3>
+							<h5>Do you get angry easily? </h5>
 							<select id="question3">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -86,8 +102,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 4</h3>
-							<h5>You're a great storyteller.</h5>
+							<h3>4.</h3>
+							<h5>Do you have big dreams you can't accomplish? </h5>
 							<select id="question4">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -99,8 +115,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 5</h3>
-							<h5>People consider you to be a reliable person.</h5>
+							<h3>5.</h3>
+							<h5>Do you like the idea of Happy Hour in the morning? </h5>
 							<select id="question5">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -112,8 +128,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 6</h3>
-							<h5>It is difficult to annoy you.</h5>
+							<h3>6.</h3>
+							<h5>Do you regret making work friends? </h5>
 							<select id="question6">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -125,8 +141,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 7</h3>
-							<h5>In a game of truth or dare, you almost always choose dare.</h5>
+							<h3>7.</h3>
+							<h5>Do you believe in office romance? </h5>
 							<select id="question7">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -138,8 +154,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 8</h3>
-							<h5>You consider your friends to be an extension or addition to your family.</h5>
+							<h3>8.</h3>
+							<h5>Do you even like cats? </h5>
 							<select id="question8">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -151,8 +167,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 9</h3>
-							<h5>You believe listening is more powerful than having your voice be heard.</h5>
+							<h3>9.</h3>
+							<h5>Would you like to spend a day with Michael Scott? </h5>
 							<select id="question9">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -164,8 +180,8 @@
 						</div>
 
 						<div class="input-field col s12">
-							<h3>Question 10</h3>
-							<h5>You love chocolate.</h5>
+							<h3>10.</h3>
+							<h5>Do you want everyone to love you in your work place? </h5>
 							<select id="question10">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
@@ -178,7 +194,7 @@
 
 						<!-- Survey Submit Button -->
 						<div>
-							<button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit
+							<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
 								<i class="material-icons right">send</i>
 							</button>
 						</div>
@@ -189,26 +205,32 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="page-footer red accent-2">
+	<footer class="page-footer black accent-2">
 		<div class="footer-copyright">
-			<div class="container">
-				© 2018 Pokémon Company
-			</div>
 		</div>
 	</footer>
 
 	<!-- Results Card -->
-	<div id="modal1" class="modal">
-		<div class="modal-content">
-			<h4>Your Starter</h4>
-			<div class="divider"></div>
-			<h5 id="userMatch"></h5>
-			<img id="userMatchImage" class="materialboxed" width="650" src="">
+	<div id="resultsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+	
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2>Best Match</h2>
+					</div>
+					<div class="modal-body">
+						<h3 id="matchName"></h3>
+						<img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+	
+			</div>
 		</div>
-		<div class="modal-footer">
-			<a href="/survey" class="modal-action modal-close waves-effect waves-orange btn-flat">Play Again!</a>
-		</div>
-	</div>
 
 	<!-- Javascript -->
 	<script type="text/javascript">
@@ -224,35 +246,57 @@
 			});
 		});
 		// Activate submit button
-		$('#submitButton').on('click', function (event) {
-			event.preventDefault();
-			// Gather user inputs
-			var userInput = {
-				scores: [
-					$('#question1').val().trim(),
-					$('#question2').val().trim(),
-					$('#question3').val().trim(),
-					$('#question4').val().trim(),
-					$('#question5').val().trim(),
-					$('#question6').val().trim(),
-					$('#question7').val().trim(),
-					$('#question8').val().trim(),
-					$('#question9').val().trim(),
-					$('#question10').val().trim()
-				]
-			};
-			// console.log('userInput = ' + JSON.stringify(userInput));
-			// Add user inputs to friends list
-			$.post('/api/friends', userInput)
-				.done(function (data) {
-					// console.log('response = ' + JSON.stringify(data));
-					// Set the name and image values of friend match
-					$('#userMatch').html(data.matchName);
-					$("#userMatchImage").attr("src", data.matchImage);
-					// Pop open the modal dialog
-					$('#modal1').modal('open');
-				});
-		});
+		$("#submit").on("click", function() {
+        // Form validation
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          $(".chosen-select").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+        // If all required fields are filled
+        if (validateForm()) {
+          // Create an object for the user"s data
+          var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                      $('#question1').val().trim(),
+                      $('#question2').val().trim(),
+                      $('#question3').val().trim(),
+                      $('#question4').val().trim(),
+                      $('#question5').val().trim(),
+                      $('#question6').val().trim(),
+                      $('#question7').val().trim(),
+                      $('#question8').val().trim(),
+                      $('#question9').val().trim(),
+                      $('#question10').val().trim()
+            ]
+          };
+          // Grab the URL of the website
+          var currentURL = window.location.origin;
+          // AJAX post the data to the friends API.
+          $.post(currentURL + "/api/friends", userData, function(data) {
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#matchName").text(data.name);
+            $("#matchImg").attr("src", data.photo);
+            // Show the modal with the best match
+            $("#resultsModal").modal("toggle");
+          });
+        }
+        else {
+          alert("Please fill out all fields before submitting!");
+        }
+        return false;
+      });
 	</script>
 </body>
 
