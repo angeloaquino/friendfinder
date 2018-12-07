@@ -11,9 +11,11 @@ app.use(express.static(path.join(__dirname, './app/public')));
 
 // Add middleware to parse incoming request bodies
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); //security feature for server
 
 // Application routes
+//switchboard to routes
+//unnessary if its small app and routing between files isn't necessary
 require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
